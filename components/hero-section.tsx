@@ -41,10 +41,11 @@ export function HeroSection() {
           transition={{ duration: 0.7, delay: 0.15 }}
           className="max-w-4xl text-balance text-4xl font-bold leading-tight tracking-tight text-primary-foreground md:text-5xl lg:text-6xl"
         >
-          {"10년 차 간호사가"}
+          {"간호사가 직접"}
           <br />
-          {"당신의 비즈니스를 "}
-          <span className="text-secondary">{'간호'}</span>
+          {"당신의 비즈니스를"}
+          <br />
+          <span className="text-secondary">{'설계'}</span>
           {"합니다."}
         </motion.h1>
 
@@ -78,8 +79,7 @@ export function HeroSection() {
           <Button
             asChild
             size="lg"
-            variant="outline"
-            className="border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10 gap-2 text-base"
+            className="bg-secondary/20 text-secondary border border-secondary/30 hover:bg-secondary/30 gap-2 text-base"
           >
             <a href="#services">
               <Briefcase className="h-4 w-4" />
@@ -96,16 +96,16 @@ export function HeroSection() {
           className="mt-20 grid w-full max-w-3xl grid-cols-3 gap-6 rounded-2xl border border-primary-foreground/10 bg-primary-foreground/5 px-8 py-8 backdrop-blur"
         >
           {[
-            { value: "13+", label: "임상 경험 (년)" },
-            { value: "300%", label: "평균 트래픽 상승" },
-            { value: "50+", label: "전문직 고객사" },
-          ].map((stat) => (
-            <div key={stat.label} className="text-center">
-              <div className="text-2xl font-bold text-secondary md:text-3xl">
-                {stat.value}
+            { title: "브랜드 블로그", desc: "전문직 특화 고퀄리티 콘텐츠" },
+            { title: "스마트플레이스", desc: "네이버 지도 상위 노출 설계" },
+            { title: "체험단", desc: "신뢰 리뷰 기반 마케팅" },
+          ].map((service) => (
+            <div key={service.title} className="text-center">
+              <div className="text-xl font-bold text-secondary md:text-2xl">
+                {service.title}
               </div>
               <div className="mt-1 text-xs font-medium text-primary-foreground/50 md:text-sm">
-                {stat.label}
+                {service.desc}
               </div>
             </div>
           ))}

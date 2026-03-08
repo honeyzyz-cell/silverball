@@ -37,7 +37,9 @@ export function StorySection() {
               The Story
             </span>
             <h2 className="max-w-2xl text-balance text-3xl font-bold tracking-tight text-foreground md:text-4xl">
-              {"왜 간호사가 마케팅을 하나요?"}
+              {"왜 간호사가"}
+              <br />
+              {"마케팅을 하나요?"}
             </h2>
             <p className="mt-4 max-w-xl text-pretty leading-relaxed text-muted-foreground">
               {"13년의 임상 경험이 만들어낸 '진단형 마케팅'. 단순 광고가 아닌, 간호 진단 모델을 마케팅에 이식한 체계적 접근법입니다."}

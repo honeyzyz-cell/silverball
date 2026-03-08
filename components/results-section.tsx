@@ -57,21 +57,24 @@ const results = [
     icon: MapPin,
     value: 1,
     suffix: "위",
-    label: "지역 키워드 블로그 점유",
+    label: "지역 키워드",
+    label2: "블로그 점유",
     description: "지역 키워드 블로그 상위 노출로 검색 유입을 선점합니다.",
   },
   {
     icon: ThumbsUp,
     value: 100,
     suffix: "%",
-    label: "블로거 체험단 신뢰리뷰",
+    label: "프리미엄 블로그",
+    label2: "체험단 모집 실행",
     description: "블로거 체험단을 활용한 진정성 있는 리뷰로 고객 신뢰를 구축합니다.",
   },
   {
     icon: MessageSquare,
-    value: 100,
-    suffix: "%",
-    label: "문의·상담 연결 구조",
+    value: 3,
+    suffix: "단계",
+    label: "문의, 상담",
+    label2: "연결구조",
     description: "유입부터 문의, 상담까지 자연스럽게 연결되는 전환 구조를 설계합니다.",
   },
 ]
@@ -107,6 +110,7 @@ export function ResultsSection() {
                 </div>
                 <div className="mt-1 text-sm font-semibold text-foreground">
                   {item.label}
+                  {item.label2 && <><br />{item.label2}</>}
                 </div>
                 <p className="mt-2 text-xs leading-relaxed text-muted-foreground">
                   {item.description}
