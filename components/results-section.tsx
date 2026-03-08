@@ -6,7 +6,7 @@ import { useEffect, useRef } from "react"
 import {
   TrendingUp,
   MapPin,
-  Star,
+  ThumbsUp,
   MessageSquare,
 } from "lucide-react"
 
@@ -48,58 +48,31 @@ function AnimatedCounter({ target, suffix = "" }: { target: number; suffix?: str
 const results = [
   {
     icon: TrendingUp,
-    value: 300,
+    value: 1000,
     suffix: "%",
-    label: "블로그 방문자 상승",
-    description: "체계적인 SEO 전략으로 고객사 블로그 트래픽 300% 상승을 달성했습니다.",
+    label: "플레이스 방문자 상승",
+    description: "네이버 플레이스 최적화를 통해 방문자 수 1000% 상승을 달성했습니다.",
   },
   {
     icon: MapPin,
     value: 1,
     suffix: "위",
-    label: "지역 키워드 점유",
-    description: "네이버 플레이스 지역 키워드 1페이지 최상단 노출을 유지하고 있습니다.",
+    label: "지역 키워드 블로그 점유",
+    description: "지역 키워드 블로그 상위 노출로 검색 유입을 선점합니다.",
   },
   {
-    icon: Star,
-    value: 98,
+    icon: ThumbsUp,
+    value: 100,
     suffix: "%",
-    label: "고객 만족도",
-    description: "전문직 고객사들의 높은 재계약률이 증명하는 서비스 만족도입니다.",
+    label: "블로거 체험단 신뢰리뷰",
+    description: "블로거 체험단을 활용한 진정성 있는 리뷰로 고객 신뢰를 구축합니다.",
   },
   {
     icon: MessageSquare,
-    value: 50,
-    suffix: "+",
-    label: "성공 사례",
-    description: "병원, 상담센터, 학원 등 다양한 전문직 분야에서 성과를 만들었습니다.",
-  },
-]
-
-const reviews = [
-  {
-    text: "블로그 시작 2개월 만에 일 방문자 500명을 돌파했어요. 전문적인 원고 퀄리티에 놀랐습니다.",
-    author: "OO 한의원 원장님",
-  },
-  {
-    text: "의료법 걱정 없이 마케팅할 수 있어서 너무 좋았어요. 간호사 출신이라 소통이 잘 됩니다.",
-    author: "OO 피부과 실장님",
-  },
-  {
-    text: "네이버 플레이스 최적화 후 예약 전환이 2배 이상 늘었습니다. 체계적인 분석이 인상적이에요.",
-    author: "OO 상담센터 대표님",
-  },
-  {
-    text: "다른 대행사와 차원이 달라요. 우리 분야를 이해하고 있으니 설명할 필요가 없어서 편합니다.",
-    author: "OO 심리상담소 원장님",
-  },
-  {
-    text: "컨설팅 한 번으로 마케팅 방향이 확실해졌어요. 실행 가능한 구체적 플랜을 주셔서 감사합니다.",
-    author: "OO 학원 대표님",
-  },
-  {
-    text: "체험단 운영도 타겟에 맞게 꼼꼼하게 진행해주세요. 블로그 유입이 확실히 체감됩니다.",
-    author: "OO 치과 마케팅 담당자님",
+    value: 100,
+    suffix: "%",
+    label: "문의·상담 연결 구조",
+    description: "유입부터 문의, 상담까지 자연스럽게 연결되는 전환 구조를 설계합니다.",
   },
 ]
 
@@ -116,7 +89,7 @@ export function ResultsSection() {
               {"숫자가 증명하는 실력"}
             </h2>
             <p className="mt-4 max-w-xl text-pretty leading-relaxed text-muted-foreground">
-              {"실제 광고주들의 성과 데이터와 생생한 후기로 확인하세요."}
+              {"병원 · 심리상담 · 실버사업 · 의료사업 특화 마케팅의 실제 성과를 확인하세요."}
             </p>
           </div>
         </AnimateIn>
@@ -143,41 +116,6 @@ export function ResultsSection() {
           ))}
         </div>
 
-        {/* Review grid */}
-        <AnimateIn delay={0.2}>
-          <div className="mt-20">
-            <h3 className="mb-8 text-center text-xl font-bold text-foreground">
-              {"고객 후기"}
-            </h3>
-            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-              {reviews.map((review, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: 0.08 * i }}
-                  className="rounded-xl border border-border bg-card p-6"
-                >
-                  <div className="mb-3 flex gap-1">
-                    {[...Array(5)].map((_, j) => (
-                      <Star
-                        key={j}
-                        className="h-4 w-4 fill-[#facc15] text-[#facc15]"
-                      />
-                    ))}
-                  </div>
-                  <p className="text-sm leading-relaxed text-muted-foreground">
-                    {'"' + review.text + '"'}
-                  </p>
-                  <p className="mt-4 text-sm font-semibold text-foreground">
-                    {review.author}
-                  </p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </AnimateIn>
       </div>
     </section>
   )

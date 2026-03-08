@@ -31,9 +31,9 @@ export function CtaSection() {
           </div>
 
           <h2 className="text-balance text-3xl font-bold tracking-tight text-primary-foreground md:text-4xl lg:text-5xl">
-            {"대표님의 서비스가"}
+            {"고객이 당신의 서비스를"}
             <br />
-            {"검색창에서 고객을 만나게 하세요."}
+            {"경험하도록 설계하세요."}
           </h2>
 
           <p className="mx-auto mt-6 max-w-lg text-pretty leading-relaxed text-primary-foreground/60">
